@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> {% block title %}{% endblock title %} </title>
+
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+ <style>
+    /* Custom Inter font */
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+
+
+</head>
+<body>
+    {% block navbar %}
+    {% include "components/navbar.html" %}
+    {% endblock navbar %}
+{% block herosection %}{% endblock herosection %}
+{% block maincontent %}{% endblock maincontent %}
+
+{% block fotter %}{% endblock fotter %}
+</body>
+
+</html>

@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+
+{% block title %}Toolbox{% endblock title %}Toolbox
+
+{% block herosection %}
+    {% include "components/herosection.html" %}
+{% endblock herosection %}
+
+
+{% block maincontent %}
+
+<section class="bg-white py-16 px-6 lg:px-12 font-[Inter,sans-serif]">
+  <div class="max-w-7xl mx-auto">
+    <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-10">Tool Categories</h2>
+    
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      
+      <!-- Card -->
+      <div class="flex flex-col items-start">
+        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhP8cGc9WG_q4M4tggWXQYGAUYENj3jyhvfQwZAGAHedt1CeBo8fuKv4mBSDXi2pX-_r71fFxQh5WkIZkQRS6GyQu_3lLLYUHcZwXLwjBUEMvOLGgGp6oprdwcrNaK97tsU17voSfpSuM2qcTSQGvEM6v7zeUt2Kh6hE5K7gj9kvfyLH4R5S4kls38ordDPx1sPozvyeP6qcuU9W0EN0ZrRIe58Gc7sQoNHoPunktcSsegSo3fBmlel4LrIhr6hf7T9_Hx_zZGDkXC"
+
+        alt="Text Tools" class="rounded-xl shadow-sm mb-4">
+        <a href="{%url 'texttool'%}" ><h3  class="text-lg font-semibold text-gray-900">Text Tools</h3></a>
+        <p class="text-gray-600 mt-1 text-sm leading-relaxed">
+          Manipulate and format text with tools like text case converter, word counter, and more.
+        </p>
+      </div>
+
+      <!-- Card -->
+      <div class="flex flex-col items-start">
+        <img src=
+        "https://lh3.googleusercontent.com/aida-public/AB6AXuDhEww6OXK6CMgJtj_IjnOW84U30m9ZOk2qj3klHD4qNWBYsvw3Erx6uqkMBmBHZqjVcDgjzuzBIz6aFls5LabSMuSfJkMUxiW4aw9l55XVxviSUBLqNDjzvDK9NmIs4LK7RgiEOzXumFb7Z9UpJPv-g7YOFceoDDSvXbCG4DoHlblgj0h2oygoP9o-smbWkf0q8kcHb0xtcnwuGcQBUpM-LEHRkeLIR03rjnesrqjlof7m_rhG_k21eEOgE5P5U4Sj1aDsQIWYBGvB"
+
+        alt="Image Tools" class="rounded-xl shadow-sm mb-4">
+        <a href="{%url 'imagetool'%}"><h3 class="text-lg font-semibold text-gray-900">Image Tools</h3></a>
+        <p class="text-gray-600 mt-1 text-sm leading-relaxed">
+          Edit and enhance images with tools like image resizer, compressor, and format converter.
+        </p>
+      </div>
+
+      <!-- Card -->
+      <div class="flex flex-col items-start">
+        <img src=
+        "https://lh3.googleusercontent.com/aida-public/AB6AXuABWqEplBgJ-ThspWSajW538oYSd3UBNApMSaLk-JzvJt5SZ2h5eRb8usE4xbUj2nGic-ouUJI0e3JKoCPjLNci2tF6vnKlOUWBuevT-isvrVegn0XT6aK6r68CE6Beik_hZYdFLSW9Fdb8Yy5WajETHoMck5_dg5INCWZ9izbfo6jzy0KvoZ_m23FWDQqZ7Pf25-6A3AM2fMWfHaWL9F1DdlaBPxshIhQp9moyLFzwCJuDYf5ui9bXLBu3rV3LHLcJ5zUBBQfcdI_F"
+        
+        alt="Math & Conversion" class="rounded-xl shadow-sm mb-4">
+        <a href="{%url 'mathtool'%}"><h3 class="text-lg font-semibold text-gray-900">Math & Conversion</h3></a>
+        <p class="text-gray-600 mt-1 text-sm leading-relaxed">
+          Perform calculations and conversions with tools like unit converter, calculator, and currency converter.
+        </p>
+      </div>
+
+      <!-- Card -->
+      <div class="flex flex-col items-start">
+        <img src=
+        "https://lh3.googleusercontent.com/aida-public/AB6AXuCJB4F2CwU0gQY8zEd_CqQaby0me7UrPif6cZyQY7pkKTaoWVk3pKDppEQpdJoE6CwnLke_UXXKsFDaxZE_lw2cnQmp-RmfcfXgfg0i3aJuumCPapVya_gQ7JPWQNwqsZUIS_XTdk1LZQ7sPOysy8CamZjKIjYKViBmgqNeuLDPN2b80I9XFJWOm4fhhTDF_E9F520q7xLpWUktDzoe5KsABd3TtYdXt6Un3bpiGSzAHPtlXwT-dCGkW6EqRzZkvpDXJSHswxLL1cMh"
+        
+        alt="Web & Dev" class="rounded-xl shadow-sm mb-4">
+        <a href="{%url 'webtool'%}"><h3 class="text-lg font-semibold text-gray-900">Web & Dev</h3></a>
+        <p class="text-gray-600 mt-1 text-sm leading-relaxed">
+          Analyze and optimize websites with tools like website speed test, SEO checker, and domain lookup.
+        </p>
+      </div>
+
+      <!-- Card -->
+      <div class="flex flex-col items-start">
+        <img src=
+        "https://lh3.googleusercontent.com/aida-public/AB6AXuBJDuVwOl0ZFY7StdOqZWMjryijoMi1i52rJzvMcVW32_ei6gHuSYIlwiEDo8DOBclpUtWb1BmbN2CxsCyeIBEOfzSlySez7_BXndk-58A3oZDf7lrY4H4y53nBGIaFaD_J_tXXaAG1NtnkxBx0f2ev5J12uv25WBgtJaMs5AJr-PrXZEao1Fnu-krvD2TGiOPUz09pSi6q6Qgrh277zUaFiqOzINSnR0m0xeCRV9ehnwx4UwWrPGLhofqHL8LV5zDLM2ejnfuKtaw4"
+        
+        alt="Code Utilities" class="rounded-xl shadow-sm mb-4">
+        <a href="{%url 'codeutilitiestool'%}" ><h3 class="text-lg font-semibold text-gray-900">Code Utilities</h3></a>
+        <p class="text-gray-600 mt-1 text-sm leading-relaxed">
+          Format and validate code with tools like code beautifier, syntax highlighter, and JSON validator.
+        </p>
+      </div>
+
+      <!-- Card -->
+      <div class="flex flex-col items-start">
+        <img src=
+        "https://lh3.googleusercontent.com/aida-public/AB6AXuBP4NUGWQhyedKNtIvWYW6krsVvx6TBNt8U0A8vW5hf4Y1R1-WSya7wersKOJjHigCIqjT-ORK_v-hpwzHkzcRZeaolM1AobJIdx5Ig0YmE2B2nLgQxmfTWHjbL4CyYi9KwdscQSMSCGZ7RQiP4_LSU6asmisNB4JYHbF_VGJMeR_frXl48W2A_7r4KQzDkCxOgxviqmEoJJDYV0FgZFtdesc7z87e4SrKhFOe5jTGt_xSSHMsTObCDzaJ1U6Gq9MeKB--ZO0hLUbWo"
+
+        alt="Misc Tools" class="rounded-xl shadow-sm mb-4">
+        <a href="{%url 'misctool'%}"><h3 class="text-lg font-semibold text-gray-900">Misc Tools</h3></a>
+        <p class="text-gray-600 mt-1 text-sm leading-relaxed">
+          Access a variety of other useful tools like QR code generator, password generator, and IP address lookup.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+{% endblock maincontent %}
