@@ -1,0 +1,79 @@
+ {% block navbar %}
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f1f2f4] px-10 py-3 font-inter">
+  <!-- Left: Logo and Label -->
+  <div class="flex items-center gap-4 text-[#121416]">
+    <div class="size-4">
+      <!-- SVG Logo -->
+      <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M24 18.4228L42 11.475V34.3663C42 34.7796 41.7457 35.1504 41.3601 35.2992L24 42V18.4228Z"
+          fill="currentColor"></path>
+        <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M24 8.18819L33.4123 11.574L24 15.2071L14.5877 11.574L24 8.18819ZM9 15.8487L21 20.4805V37.6263L9 32.9945V15.8487ZM27 37.6263V20.4805L39 15.8487V32.9945L27 37.6263ZM25.354 2.29885C24.4788 1.98402 23.5212 1.98402 22.646 2.29885L4.98454 8.65208C3.7939 9.08038 3 10.2097 3 11.475V34.3663C3 36.0196 4.01719 37.5026 5.55962 38.098L22.9197 44.7987C23.6149 45.0671 24.3851 45.0671 25.0803 44.7987L42.4404 38.098C43.9828 37.5026 45 36.0196 45 34.3663V11.475C45 10.2097 44.2061 9.08038 43.0155 8.65208L25.354 2.29885Z"
+          fill="currentColor"></path>
+      </svg>
+    </div>
+    <a href="{%url 'home'%}"><h2 class="text-[#121416] text-lg font-bold leading-tight tracking-[-0.015em]">Toolbox</h2></a>
+  </div>
+
+  <!-- Right: Navigation and Actions -->
+  <!-- <div class="flex flex-1 justify-end gap-8"> -->
+    
+
+    <!-- Navigation Links -->
+    <div class="flex items-center gap-9">
+      <a class="text-[#121416] text-sm font-medium leading-normal" href="{%url 'texttool'%}">Text Tools</a>
+      <a class="text-[#121416] text-sm font-medium leading-normal" href="{%url 'imagetool'%}">Image Tools</a>
+      <a class="text-[#121416] text-sm font-medium leading-normal" href="{%url 'mathtool'%}">Math & Conversion</a>
+      <a class="text-[#121416] text-sm font-medium leading-normal" href="{%url 'webtool'%}">Web & Dev</a>
+      <a class="text-[#121416] text-sm font-medium leading-normal" href="{%url 'codeutilitiestool'%}">Code Utilities</a>
+      <a class="text-[#121416] text-sm font-medium leading-normal" href="{%url 'misctool'%}">Misc Tools</a>
+    </div>
+
+    <!-- Search, Toggle, Profile -->
+    <div class="flex items-center gap-2">
+      
+      <!-- Search -->
+      <div class="relative">
+        <input
+          type="text"
+          placeholder="Search"
+          class="pl-9 pr-3 py-[6px] text-sm rounded-md border border-gray-300 focus:ring-1 focus:ring-blue-500 focus:outline-none w-40"
+        />
+        <svg
+          class="w-4 h-4 absolute left-3 top-[7px] text-gray-400"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+        >
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 1010.5 18.5a7.5 7.5 0 006.15-3.85z" />
+        </svg>
+      </div>
+
+      <!-- Theme Toggle -->
+      <button class="w-8 h-8 flex items-center justify-center rounded-full border border-gray-300 hover:bg-gray-100 transition">
+        <svg
+          class="w-5 h-5 text-gray-600"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+        >
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M12 3v1m0 16v1m8.66-9H21m-16.66 0H3m15.36 6.36l-.71-.71m-11.31 0l-.71.71m11.31-11.31l-.71.71m-11.31 0l-.71-.71M12 5a7 7 0 100 14 7 7 0 000-14z" />
+        </svg>
+      </button>
+
+      <!-- Avatar -->
+      <img
+        src="https://i.pravatar.cc/32?img=1"
+        alt="Profile"
+        class="w-8 h-8 rounded-full border border-gray-300 object-cover"
+      />
+    </div>
+  </div>
+</header>
+{% endblock %}
+
