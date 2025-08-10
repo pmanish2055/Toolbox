@@ -1,0 +1,43 @@
+{% block herosection %}
+<section class="relative min-h-screen w-full overflow-hidden bg-[#f9f9fb] font-[Inter,sans-serif]">
+  <!-- Background gradient or image -->
+  <div class="absolute inset-0 bg-gradient-to-br from-indigo-100 via-white to-purple-50"></div>
+
+  <!-- Layout Container -->
+  <div class="relative z-10 flex flex-col lg:flex-row items-center justify-between max-w-7xl mx-auto px-6 py-24 lg:py-32 gap-10">
+    
+    <!-- Text Content -->
+    <div class="max-w-2xl text-center lg:text-left">
+      <h1 class="text-4xl sm:text-5xl font-extrabold leading-tight text-gray-900 tracking-tight">
+        Everything You Need <br>
+        <span class="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
+          In One Toolbox
+        </span>
+      </h1>
+      <p class="mt-6 text-gray-600 text-lg leading-relaxed">
+        A beautiful collection of smart, fast, and free tools — from editors to converters — designed to make your digital workflow effortless.
+      </p>
+      <div class="mt-8 flex flex-col sm:flex-row items-center sm:items-start gap-4">
+        <a href="#tools" class="px-6 py-3 rounded-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold transition duration-300 shadow-lg">
+          Explore Tools
+        </a>
+        <a href="#categories" class="px-6 py-3 rounded-full border border-gray-300 hover:border-gray-500 text-gray-700 font-medium transition duration-300">
+          Browse Categories
+        </a>
+      </div>
+    </div>
+
+    <!-- Graphic Element / Mockup -->
+    <div class="max-w-xl w-full">
+      <div class="w-full h-80 sm:h-96 rounded-3xl shadow-2xl overflow-hidden relative">
+       <img
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhaUQ9Tv4mRlY0Sib5krCnk3OZIcqaOr2ac0haXfFw5U5YPtrzWEjRFNzipxOhaC2-zN7Z-HPrmD8pYncsxMm8lL9fIif31k6nrSzUrT5p0UWCGLDE2q9bOJEIKBOPRA_lvb7kyw-YuMx-fWBdrRVp53-ETtYFjx2iNPX7AcEp0_37agDq7pNKHOp2KGTYe6GgL_pbgRqMSJl2Zel4jJ75Tdq9wykADgaMDGmVyniQDsaGRKQrlWDuFm1nxR6kRWIT_OiQepan3tDC"
+          alt="Toolbox preview"
+          class="object-cover w-full h-full"
+        />
+        <div class="absolute top-0 left-0 w-full h-full bg-black/10  rounded-3xl"></div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock herosection %}

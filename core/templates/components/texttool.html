@@ -1,0 +1,187 @@
+{% extends "base.html" %}
+
+{% block maincontent %}
+ <div class="relative flex size-full min-h-screen flex-col bg-white group/design-root overflow-x-hidden" style='font-family: Inter, "Noto Sans", sans-serif;'>
+      <div class="layout-container flex h-full grow flex-col">
+      
+        <div class="px-40 flex flex-1 justify-center py-5">
+          <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+            <div class="flex flex-wrap justify-between gap-3 p-4">
+              <div class="flex min-w-72 flex-col gap-3">
+                <p class="text-[#121416] tracking-light text-[32px] font-bold leading-tight">Text Tools</p>
+                <p class="text-[#6a7581] text-sm font-normal leading-normal">
+                  A comprehensive suite of text manipulation tools designed to streamline your workflow and enhance productivity. From basic text formatting to advanced text
+                  analysis, our tools cater to a wide range of needs.
+                </p>
+              </div>
+            </div>
+            <div class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-4">
+              <div class="flex flex-col gap-3 pb-3">
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBFo8ukstUNT9jjtX8tiu5CeO9z5sSXKwmXH8xgTG3KOum84ByM99cZJ_kH-DKcEhnOxYmpxpVEgURTVu5mxLuWV5H75IUtEJEafMXCL8ILrIBYvNqFu-U4zlDV_mRiWIrDDzOUtO_zokh_f29FV_8LuaLsT3Lf--Ums0CtXrD2l1BZtIXiFcNFp4JaUhZxfattFr0LORMTB_-OUCvZzT4-VhKf9EZrJ2zeaDFqlA-JPU25mA99YyF8on0nwgM5nIfXzW8jNXdZ2AKY");'
+                ></div>
+                <div>
+                  <a href="{%url 'wordcount'%}"><p class="text-[#121416] text-base font-medium leading-normal">Word Counter</p></a>
+                  <p class="text-[#6a7581] text-sm font-normal leading-normal">Count words in your text</p>
+                </div>
+              </div>
+            
+              <div class="flex flex-col gap-3 pb-3">
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDd4h3MaCHRvwBxe5DmV_uhlY78LLdaUCgPt3pZoWor1dho5Hx4NUZ-9CXJ_M767v5mtN_rfJbRW-gdAyxREpOfDcxN1DPTqZD9cXQoP9sf8YvZI9PisB6-9UXifDQmiBXRYMUS2aNEVRoZZc_HWlx8fesjQCt4dpvdZuKytD8hlLsJPgZZozxAQe9KO3TndsV6IphHJniVh_15mcgMBWGEhExBCEE_8dgZPt_ePAub3Wi9jX95q7pp4TwJIp0Xam-hFs5wJxjcOOXK");'
+                ></div>
+                <div>
+                  <p class="text-[#121416] text-base font-medium leading-normal">Text Summarizer</p>
+                  <p class="text-[#6a7581] text-sm font-normal leading-normal">Summarize long texts</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 pb-3">
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDu-KDMUDLuh1NZQvqMAi3YP-lArBXJ1WS2jrbGxssbuvFvYltAxZZG6hD7Pm-lfQw5y_REIMW6CKQZbn-oJs1T2HUNz6Hf29uwF_yYcHY0TVvASIH2338WN95lYkFJ0ouFCMCDwbhNy_Dud9S18ZHb72asx3FpOzC5C3EOdxILbQMrpg2dssPBgqA-JE66VbICC28QS6XJM04GfBGDIne9wZIfAQ9I2cPfrNZ6rOlPzEecGXB_ti6XktH0c2hQCUqNikh_aZcgWx2Z");'
+                ></div>
+                <div>
+                  <a href={%url 'texttranslation'%}>
+                  <p class="text-[#121416] text-base font-medium leading-normal">Text Translator</p>
+                </a>
+                  <p class="text-[#6a7581] text-sm font-normal leading-normal">Translate text to different languages</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 pb-3">
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBWvh0qUJUdZNcSpfNohNbgxlyVRtY32ZYujFd8Puae67iSbw2-dc9BpeU3dA0M0Bq4HFc6tVDy3jAebWJHj_ET2qJI8kf95KJw-4lJrDQsQiC4vq7NKbCWbM65iPFhjEVwDDn0LjP0sGfqGylI-AHVjHkB8p8f7zTsh-6dFgoX75-lxfEXb6ZE7LRydfe8lfh-PU5sJsUD1RPky3RhzO7uyTkKoWFknSBH13Kon4an-stf0r3DwO_KkLVqrfWKNfflpw86d723uXR1");'
+                ></div>
+                <div>
+                  <p class="text-[#121416] text-base font-medium leading-normal">Text to Speech</p>
+                  <p class="text-[#6a7581] text-sm font-normal leading-normal">Convert text to speech</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 pb-3">
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC7fla8lQAQQB-mBDSh-Kjv8654jchb2GjcdtSbF9Pz3WoxV_TZwsTcpt26k_oA5NfA6M9Wx6C7hqASPcfHZ7cnusNEyoBaNt1rpuGqyx2GMOjObexnhjYP0qd8sfMd8hyBzIyarjbYUAw-0AAIdYrYCrV4cAkXdtZ06skou5sFaST02RfNlPLatwbbPFQ0zivgi4KfeIeLGrGO5HmuddnJeq30wFM5lhWESuoh-X5xfJIaBNdXAdyYZzqWOZ84ZChGMgntULa2m_eE");'
+                ></div>
+                <div>
+                  <p class="text-[#121416] text-base font-medium leading-normal">Speech to Text</p>
+                  <p class="text-[#6a7581] text-sm font-normal leading-normal">Convert speech to text</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 pb-3">
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCLsH-Ae7zfeu2Wbl0iwqd_MUjB9nbn8OzWc65fO5eG3y2NnCyGC2Wy6205ux-g6GehW6_rfdzz9eyvxdFrnuZ5hcbS_7g-u2lhRbuj-g5BZfJATL4JuRubP9uCqsb3FBjijuEL6pnlHRpf4iqbTsR8L17llsgHzQGPrFCPmzsAi5_nE7FosfI_PjcTawQJINm56Cld1GO7zeWUQb4mZcaI5TMA7qhIjfvtcXpWsMyh2_oQTO4NDT97toMKxXJiNq4GdYQ4KneVEq23");'
+                ></div>
+                <div>
+                  <p class="text-[#121416] text-base font-medium leading-normal">Text Extractor</p>
+                  <p class="text-[#6a7581] text-sm font-normal leading-normal">Extract text from images</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 pb-3">
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC6BaQFI6PJyrJTXsoHNTkqFrffhmrpmw33FPutH-sP-DPqtbY5IcCxTL1sh9BxhTb7NuH0dZIwOM7DjsUFxYujQu-gkIMnHMv7qDlOA5ZAPjxjYfM3lX3cvtF2VzlxL1aZuStgpwVsHPLHmGt0H5wsPlag5tZfKnXdqTh0NB25F2aZETK5umdE0KNQcNZaK8QODAnMHTlGdj9SdUgb7Kua53pIYDcQh7X5A7PlN5k9ESExcbNBqN8qEmkCKGo0d9wHHg477SjDGdP6");'
+                ></div>
+                <div>
+                  <p class="text-[#121416] text-base font-medium leading-normal">Text Replacer</p>
+                  <p class="text-[#6a7581] text-sm font-normal leading-normal">Replace text in your text</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 pb-3">
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDf37qhhvj5BUJUdyhtyDYmyH5LMQKQl-_dUZWA29joQ_qb02JoXS37Tbt397ThavPwjT6qBwfT8wdyJJfj17VBKz5UJLEQUrt3Ed16LCOV-zxzGaoUdWsR-NXdbeNgBcztsPL5V8CCtd7MEuWWqlLrgvfmuRH4uDBvkO2B5m5-DYSIwI_HPDFCx105pHLkMNs8pjhBd68lVjG3ebGZ5woFxpdtWq772I8hIsgbHNqp7zK8rbhUbHZwfh-2ar-5J_GcTzwJjwe-qv0k");'
+                ></div>
+                <div>
+                  <p class="text-[#121416] text-base font-medium leading-normal">Text Splitter</p>
+                  <p class="text-[#6a7581] text-sm font-normal leading-normal">Split text into parts</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 pb-3">
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAZmIvAO40CqT3eZb4vK855_XtOGBiijFqSIgPHpGtVOW-I75fz44rMnMtiXTmq29NjOAnRJB6lAyqWjpodkZiPx6uoDJSiyKCJ1gxuqM8u6LezwEzu_FfXbc9l5Rov2Yq3DD904yzlcUuvb1xtQZRZJ2JtLwo-Dx1xxyS178QsRm1bFZDeY6UfkF54nKl7SGG1dqcrlhdRhhwH6lOTD2Z2EQgMNVOnUFA1mLkXaB_pLDr5VLL8zyrOnIE0G0fyrhH1Gv7r1-lmxc7x");'
+                ></div>
+                <div>
+                  <p class="text-[#121416] text-base font-medium leading-normal">Text Combiner</p>
+                  <p class="text-[#6a7581] text-sm font-normal leading-normal">Combine multiple texts</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 pb-3">
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuATsyxCQFP_Nf7Wy1J-rCTvYmr5z9WB3wmttCK6BqueYhr7lJDooRaZOB4xOd0-FJZNWjDoYVkB9MA07fgMAtLNbnWiLdHdm3yDyGgTw7xEyK4Dsnt_yAa0mxd9gjBbJrmTAvaeN-AkEHjQ3ot0O3AsIqoTDvks1L7EIWuPEZf3JLB99Zr3SaRXkEVWaZM8zrOJ3sUFweKuedhVcxFyrep0YtzSGvafUOF1Y16-eRmamujwC7jOi_R-dZp10ey68acKaODgSk6e2yoe");'
+                ></div>
+                <div>
+                  <p class="text-[#121416] text-base font-medium leading-normal">Text Sorter</p>
+                  <p class="text-[#6a7581] text-sm font-normal leading-normal">Sort text alphabetically</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 pb-3">
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDpsA1eov1zk3auB3kzSHyCgs-LYYwJfO66PW0lISxsTw32jMoWXPY5NO8gl7t-QCGubFUXh5PUtctXUtrc05i4M_ZH8b-gitdhay9pmvBBM8aKgKVQ1NHPqGt-1OBPgdOkdWyBA-FxokQTJOBjD43WsQlQZzX1L2AhyNPqHaWsC_OmBw49snHq_wiF39YuDz9Ibz9xc_NUyuw8AKRMsN05T0apJ-ZX0FXA4BFuiiunX51flrjZ-SBZHuQMnXFukMt2VK0C0NJY8DuR");'
+                ></div>
+                <div>
+                  <p class="text-[#121416] text-base font-medium leading-normal">Text Formatter</p>
+                  <p class="text-[#6a7581] text-sm font-normal leading-normal">Format text with various options</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 pb-3">
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCwmpoqnjMUtOJfuroaV8nFXXZDPaHbWQb7RwUO9HBjoVRmIB20azzK51O1rqm-5o-P8MQr6qpcNXv6_I0Lo92crNY9ZddaBaI2_JJQmTFj5WxHtHGQcoUZ07_bhx95mUxl3JJoXg_jgl8SI2fzft5A-5Drcu8Ohn-MQjDzOVNwjem9fTzium_sKz9BcCL2AGkE7h5Kv2Yw1Ebvyzdhaz9KH2NEBMtLlhnpBLqPHkdtdoRSUdHG3ydEVnSSGGD3uAQ9FhHc5Hv1Tkzb");'
+                ></div>
+                <div>
+                  <p class="text-[#121416] text-base font-medium leading-normal">Text Case Converter</p>
+                  <p class="text-[#6a7581] text-sm font-normal leading-normal">Convert text case (upper, lower, title)</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 pb-3">
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDYaqy_x6kYmxeYy9nvV71cZjmclKw7W83AlP0gQzLIcuTO1U1Zk24youOptag4IJXulAXahQE9q7nw7rpLqKTk-OK463iMUmcaxIrD6qG5wgc9TujTJCOFsXAU7-JC0QYfz1OFWSUC9URWCTqrKdncFQigv3xqyAPsh53KtzbjA30PpSYcCyLxCjePBws6o-H0RdO210Up75tOtS6cBfuAwron0vMTkFnL2uVHNBXqF5DxqZHC54GmTscLkqgyulJInGWosds33-UY");'
+                ></div>
+                <div>
+                  <p class="text-[#121416] text-base font-medium leading-normal">Text Encoder/Decoder</p>
+                  <p class="text-[#6a7581] text-sm font-normal leading-normal">Encode and decode text</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 pb-3">
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCpITn1ySNeRtQKxqhPuJ1VqzeNbMExitu3nE8iJqsaiarSK5YSstFiwxeGd6_Xxg12k3QxSm_En16KRfI_BwW4IqWFy1ORcvBMEqgtnTW85TJPoncbg4XeUDRGBwIx1sJAiZFZ_nZhWJ1gKUKczbViWUckSPxRpeYX6CFcomyyqtUA9QSbcC050SB1wH2oDMn2vCJlh_xhjSEArbM04BYtwdACaiF6ejTcQZ8wQx08h2FvfRCxA26k7xDWd0D5gXn2uisZqc5-rvdb");'
+                ></div>
+                <div>
+                  <p class="text-[#121416] text-base font-medium leading-normal">Text Comparator</p>
+                  <p class="text-[#6a7581] text-sm font-normal leading-normal">Compare two texts for differences</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 pb-3">
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBRhhQchAiQUQwSHXLJg1nd5NiAQD6IT9g47kefShfmX_jcit7VcmCNAyoG65tUbqgo8yyvBo10BC7XPV8efxUrJ7KwI2BwcjpWyxh-B-SGNUd3E7gLQyE48SU1EWm4FY_IWXFM3kf2ofU3SzeX6joZvclqHlo7zvpJXO8FHwAhRPXG-IAfuw16x05FvfQ8OtSWDKdr2HSZOfZeckUes2WievpbkDcUb2soRsknxu4GWstBDDjCrZDpTlzJwq3qX-d5a9SvvIUG0wqr");'
+                ></div>
+                <div>
+                  <p class="text-[#121416] text-base font-medium leading-normal">Text Analyzer</p>
+                  <p class="text-[#6a7581] text-sm font-normal leading-normal">Analyze text for readability and sentiment</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 pb-3">
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBhKuoM8FxRMRaV1fCOJcb2nBa0AQ1eEP5pPZ_kCUjQg0mO5bmnR2zucU0EHAcW7f6Ks2vJKE91Ln4cePqkWBh5ropRBv6_6qIqOkHtiJeyLgxToyq7h4yhh5G0mD0s6j4tJaejuTFmTqiIKXX05Vzo9j2ePYx9i5VNHGrC-SL4P8ntg4HB9VKczd3oeOkMB4Ctmp46cKXgf7zK3r3PpQvfqCxkwjv5lKTh-aIsdKYmaTa7E3HVPKUsHYjhs-rdduIX12yAeua4FRlT");'
+                ></div>
+                <div>
+                  <p class="text-[#121416] text-base font-medium leading-normal">Text Generator</p>
+                  <p class="text-[#6a7581] text-sm font-normal leading-normal">Generate text based on prompts</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+{% endblock maincontent %}

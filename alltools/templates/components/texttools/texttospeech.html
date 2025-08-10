@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+
+{% block maincontent %}
+<div class="min-h-screen bg-white font-sans text-[#111418]">
+  <div class="max-w-4xl mx-auto px-4 py-10">
+    <!-- Header -->
+    <h1 class="text-3xl font-bold text-center mb-8">Text-to-Speech</h1>
+
+    <form method="POST" action="/speak" class="space-y-6">
+      <!-- Text Input -->
+      <div>
+        <label for="text" class="block text-base font-medium mb-2">Enter text</label>
+        <textarea
+          name="text"
+          id="text"
+          rows="5"
+          placeholder="Type your text here..."
+          required
+          class="w-full p-4 border border-[#dce0e5] rounded-xl text-base focus:outline-none focus:ring-2 focus:ring-[#197ce6] resize-none"
+        ></textarea>
+      </div>
+
+      <!-- Voice Selection -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <label for="language" class="block text-base font-medium mb-2">Select Language</label>
+          <select
+            name="language"
+            id="language"
+            required
+            class="w-full p-3 border border-[#dce0e5] rounded-xl text-base focus:outline-none focus:ring-2 focus:ring-[#197ce6]"
+          >
+            <option value="">Choose...</option>
+            <option value="en-US">English (US)</option>
+            <option value="es-ES">Spanish</option>
+            <option value="fr-FR">French</option>
+          </select>
+        </div>
+        <div>
+          <label for="voice" class="block text-base font-medium mb-2">Select Voice</label>
+          <select
+            name="voice"
+            id="voice"
+            class="w-full p-3 border border-[#dce0e5] rounded-xl text-base focus:outline-none focus:ring-2 focus:ring-[#197ce6]"
+          >
+            <option value="">Default</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Speech Rate -->
+      <div>
+        <label for="rate" class="block text-base font-medium mb-2">Speech Rate</label>
+        <input
+          type="range"
+          name="rate"
+          id="rate"
+          min="0.5"
+          max="2"
+          step="0.1"
+          value="1"
+          class="w-full accent-[#197ce6]"
+        />
+        <div class="text-sm text-right mt-1">1x</div>
+      </div>
+
+      <!-- Controls -->
+      <div class="flex justify-center gap-4">
+        <button
+          type="submit"
+          name="action"
+          value="play"
+          class="bg-[#197ce6] text-white px-6 py-2 rounded-full font-semibold hover:bg-[#0f5ec6] transition"
+        >
+          Play
+        </button>
+        <button
+          type="submit"
+          name="action"
+          value="stop"
+          class="bg-[#f0f2f4] text-[#111418] px-6 py-2 rounded-full font-semibold hover:bg-[#dce0e5] transition"
+        >
+          Stop
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock maincontent %}

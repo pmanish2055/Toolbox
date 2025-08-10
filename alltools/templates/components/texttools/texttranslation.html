@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+
+{% block maincontent %}
+<div class="min-h-screen bg-white font-sans text-[#111418]">
+  <div class="max-w-4xl mx-auto px-4 py-10">
+    <h1 class="text-3xl font-bold text-center mb-8">Translate Text</h1>
+
+    <form method="POST" action="{% url 'texttranslation' %}" class="space-y-8">
+      {% csrf_token %}
+
+      <!-- Language Selectors -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- From Language -->
+        <div>
+          <label for="from_language" class="block text-base font-medium mb-2">Translate from</label>
+          <select
+            name="from_language"
+            id="from_language"
+            required
+            class="w-full p-3 border border-[#dce0e5] rounded-xl text-base bg-white focus:outline-none focus:ring-2 focus:ring-[#197ce6]"
+          >
+            <option value="">Select...</option>
+            <option value="en">English</option>
+            <option value="es">Spanish</option>
+            <option value="np">Nepali</option>
+            <option value="hi">Hindi</option>
+            <option value="fr">French</option>
+          </select>
+        </div>
+
+        <!-- To Language -->
+        <div>
+          <label for="to_language" class="block text-base font-medium mb-2">Translate to</label>
+          <select
+            name="to_language"
+            id="to_language"
+            required
+            class="w-full p-3 border border-[#dce0e5] rounded-xl text-base bg-white focus:outline-none focus:ring-2 focus:ring-[#197ce6]"
+          >
+            <option value="">Select...</option>
+            <option value="en">English</option>
+            <option value="es">Spanish</option>
+            <option value="ne">Nepali</option>
+            <option value="hi">Hindi</option>
+            <option value="fr">French</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Input & Output Areas -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Input Text -->
+        <div>
+          <label for="text_input" class="block text-base font-medium mb-2">Original Text</label>
+          <textarea
+            name="text_input"
+            id="text_input"
+            rows="6"
+            placeholder="Enter text to translate..."
+            required
+            class="w-full p-4 border border-[#dce0e5] rounded-xl text-base focus:outline-none focus:ring-2 focus:ring-[#197ce6] resize-none"
+          >{{ original_text }}</textarea>
+        </div>
+
+        <!-- Output Text -->
+        <div>
+          <label for="translated_text" class="block text-base font-medium mb-2">Translated Text</label>
+          <textarea
+            name="translated_text"
+            id="translated_text"
+            rows="6"
+            readonly
+            placeholder="Translated text will appear here..."
+            class="w-full p-4 border border-[#dce0e5] rounded-xl text-base bg-gray-50 focus:outline-none resize-none"
+          >{{ translated_text }}</textarea>
+        </div>
+      </div>
+
+      <!-- Translate Button -->
+      <div class="flex justify-center">
+        <button
+          type="submit"
+          class="bg-[#197ce6] text-white px-6 py-2 rounded-full font-semibold hover:bg-[#0f5ec6] transition"
+        >
+          Translate
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock maincontent %}

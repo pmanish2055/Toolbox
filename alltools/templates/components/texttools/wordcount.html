@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+
+{% block maincontent %}
+<div class="min-h-screen bg-white font-sans text-[#111418]">
+  <div class="max-w-4xl mx-auto px-4 py-10">
+    <!-- Page Title -->
+    <h1 class="text-3xl font-bold text-center mb-8">Word Count Tool</h1>
+
+    <!-- Form -->
+    <form method="POST" action="{% url 'wordcount' %}" class="space-y-6">
+      {% csrf_token %}
+
+      <!-- Textarea -->
+      <div>
+        <label for="text_to_count" class="block text-base font-medium mb-2">Enter or paste your text</label>
+        <textarea
+          name="text_to_count"
+          id="text_to_count"
+          rows="10"
+          placeholder="Type or paste text here..."
+          required
+          class="w-full p-4 border border-[#dce0e5] rounded-xl text-base focus:outline-none focus:ring-2 focus:ring-[#197ce6] resize-none"
+        >{{ original_text }}</textarea>
+      </div>
+
+      <!-- Submit Button -->
+      <div class="flex justify-center">
+        <button
+          type="submit"
+          class="bg-[#197ce6] text-white px-6 py-2 rounded-full font-semibold hover:bg-[#0f5ec6] transition"
+        >
+          Count
+        </button>
+      </div>
+    </form>
+
+    <!-- Results -->
+    <div class="mt-10">
+      <h2 class="text-xl font-bold mb-4 px-1">Results</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <!-- Words -->
+        <div class="border border-[#dce0e5] rounded-xl p-5 text-center">
+          <p class="text-base font-medium mb-1">Words</p>
+          <p class="text-2xl font-bold">{{ word_count|default:0 }}</p>
+        </div>
+        <!-- Characters -->
+        <div class="border border-[#dce0e5] rounded-xl p-5 text-center">
+          <p class="text-base font-medium mb-1">Characters</p>
+          <p class="text-2xl font-bold">{{ character_count|default:0 }}</p>
+        </div>
+        <!-- Sentences -->
+        <div class="border border-[#dce0e5] rounded-xl p-5 text-center">
+          <p class="text-base font-medium mb-1">Sentences</p>
+          <p class="text-2xl font-bold">{{ sentence_count|default:0 }}</p>
+        </div>
+        <!-- Paragraphs -->
+        <div class="border border-[#dce0e5] rounded-xl p-5 text-center">
+          <p class="text-base font-medium mb-1">Paragraphs</p>
+          <p class="text-2xl font-bold">{{ paragraph_count|default:0 }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock maincontent %}
