@@ -1,11 +1,24 @@
-from django.shortcuts import render
-
+from django.shortcuts import render ,redirect
+from .forms import LoginForm
 
 def home (req):
     return render(req,'home.html')
 
-def login (req):
-    return render(req,'components/login.html')
+
+def login(req):
+    if req.method == 'POST':
+        form = LoginForm(req.POST)
+        if form.is_valid():
+            email = form.cleaned_data['email']
+            password = form.cleaned_data['password']
+
+            print(email, password)
+            return redirect(home)
+    else:
+        form = LoginForm()
+    
+    return render(req, 'components/login.html', {'form': form})
+
 
 
 def signup (req):

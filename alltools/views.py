@@ -34,3 +34,6 @@ def texttranslation(req):
 
 def texttospeech(req):
     return render(req,'components/texttools/texttospeech.html')
+
+def login(req):
+    return render(req,'componenets')
